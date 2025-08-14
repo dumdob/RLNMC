@@ -1,0 +1,10 @@
+{
+	"din": 2,
+
+	"dmsgs": 16,
+	"att_heads": 1,
+
+	"dextra": 2,
+	"dout": 8,
+	"global_gru": true
+}

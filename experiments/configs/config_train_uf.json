@@ -1,0 +1,53 @@
+{
+	"problem_class": "uf4sat",
+
+	"seed": 123,
+	"dtype": "float",
+	"track_stats": true,
+
+	"instances": [1, 64], 
+	
+	"train": 
+	{
+		"TOTAL_REPETITIONS": 5,
+
+		"TOTAL_TIMESTEPS_PER_INSTANCE": 208896,
+		"NUM_REPLICAS": 2048,
+		"NUM_STEPS_PER_UPDATE": 17,
+
+		"RESET_POOL": 2048,
+
+		"LR_start": 1e-3,
+		"LR_end": 1e-4,
+
+		"UPDATE_EPOCHS": 5,
+		"NUM_MINIBATCHES": 32,
+
+		"GAMMA": 0.75,
+		"GAE_LAMBDA": 0.95,
+		"CLIP_EPS": 0.5,
+		"CLIP_EPS_VF": 0.5,
+		"ENT_COEF": 0.001,
+		"VF_COEF": 0.25,
+		"MAX_GRAD_NORM": 0.5,
+		
+		"LOAD_PRETRAINED": true,
+		"LOAD_JSON": true,
+
+		"JSON_NAME": "uf500_model",
+
+		"LOAD_ORBAX": {
+			"PATH": "experiments/data/train",
+			"PROJECT_NAME": "train_uf500",
+			"PRETRAINED_ID": "local",
+			"MODEL_NAME": "model_final"
+		},
+
+		"LOG": {
+			"WANDB": true,
+			"PATH": "experiments/data/train",
+			"PROJECT_NAME": "train_uf500",
+			"DEFAULT_NAME": "local"
+		}
+	}
+}

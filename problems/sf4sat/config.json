@@ -1,0 +1,44 @@
+{
+	"default_instances": "n250_m2300",
+	"instance_name": "sf_n250_m2300",
+
+	"pmode": "wcnf",
+	"file_type": "cnf", 
+
+	"approximation": 0.0,
+	"energy_scaler": 5.0,
+
+	"SA": {
+		"total_sweeps": 31500,
+		"T_init": 0.5,
+		"T_final": 0.125
+	},
+
+	"NMC": {
+		"max_steps_in_episode": 54,
+
+		"nmc_Nsw_init": 15750,
+		"nmc_Nsw_eq": 98,
+		"nmc_Nsw_nbb": 1,
+		"nmc_Nsw_bb": 1,
+		
+		"nmc_Ncycles": 3,
+		
+		"nmc_rand_jump": true,
+		"nmc_xT": 5.0,
+		
+		"Ti": 0.5,
+		"T": 0.2,
+		"Tf": 0.125,
+
+		"nmc_schedule": true,
+		"nmc_init_annealing": true,
+		"nmc_eq_annealing": false,
+		
+		"lbp_beta_x": 1.0,
+		"lbp_num_iters": 30,
+		"lbp_tolerance_m": 1e-3,
+		"lbp_tolerance_d": 0.05,
+		"lbp_lambdas": [0.03, 0.001, 0.5]
+	} 
+}

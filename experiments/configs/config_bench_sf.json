@@ -1,0 +1,53 @@
+{
+	"problem_class": "sf4sat",
+
+	"seed": 123,
+	"dtype": "float",
+	"track_stats": true,
+	
+	"instances": [65, 384], 
+
+	"bench": 
+	{
+		"ALGO": "rlnmc",
+
+		"NMC": {
+			"RANDOM_BACKBONE": false,
+			"RND": 0.1,
+			"CUTOFF_end": 4.0,
+			"CUTOFF_start": 4.0
+		},
+
+		"NUM_DEVICES": 1,
+		"NUM_REPLICAS": 4096,
+		"NUM_LOG_STEPS": 100,
+		
+		"PERCENTILES": [10, 20, 50, 80, 90],
+
+		"DIVERSITY_R": [],
+		"DIVERSITY_PER_REPLICA": false,
+
+		"METRIC_BOOTSTRAP": 2500,
+		
+		"LOAD_PRETRAINED": true,
+
+		"LOAD_JSON": true,
+		"JSON_NAME": "sf250_model",
+		
+		"LOAD_ORBAX": {
+			"PATH": "experiments/data/train",
+			"PROJECT_NAME": "train_sf250",
+			"PRETRAINED_ID": "local",
+			"MODEL_NAME": "model_final"
+		},
+
+		"LOG": {
+			"WANDB": true,
+			"PROJECT_NAME": "bench_sf250",
+			"PATH": "experiments/data/benchmark",
+			"DEFAULT_NAME": "local"
+		},
+
+		"SAVE_RESULTS": true
+	}
+}
