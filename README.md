@@ -23,5 +23,13 @@ python experiments/bench.py --config config_bench_uf
 ## Citation
 The bibtex citation for the RLNMC paper is:
 ```
-citation_to_add_here
+@misc{dobrynin2025nmc,
+      title={Nonlocal Monte Carlo via Reinforcement Learning}, 
+      author={Dmitrii Dobrynin and Masoud Mohseni and John Paul Strachan},
+      year={2025},
+      eprint={2508.10520},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2508.10520}, 
+}
 ```
