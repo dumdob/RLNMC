@@ -1,0 +1,12 @@
+jax==0.5.3
+numpy==1.26.4
+torch==2.6.0
+distrax==0.1.5
+optax==0.2.4
+orbax==0.1.9
+gymnax==0.0.8
+flax==0.10.5
+wandb==0.19.9
+pgmax==0.6.1
+gurobipy==12.0.1
+gurobi-optimods==2.3.2
